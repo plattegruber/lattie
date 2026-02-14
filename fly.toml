@@ -1,0 +1,18 @@
+# Lattice — Fly.io deployment configuration
+#
+# This app is designed to run as a Scheduled Machine:
+# - Starts on a schedule (e.g. every 5 minutes)
+# - Performs one manager iteration
+# - Exits cleanly
+#
+# See README for Scheduled Machines setup instructions.
+
+app = "lattice"
+primary_region = "ord"
+
+[build]
+
+[env]
+  LATTICE_WRITE_ACTIONS = "true"
+  LATTICE_ENABLE_FLYCTL = "false"
+  MIX_ENV = "prod"
